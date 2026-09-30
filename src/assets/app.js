@@ -26,7 +26,7 @@
 })();
 
 // Visit odometer (Abacus hit counter). Counts at most once per browser per
-// 24h: fresh visitors HIT (increment + show), recent visitors GET (show only).
+// 30min: fresh visitors HIT (increment + show), recent visitors GET (show only).
 // Row stays hidden until a count loads; adblockers, offline, private-mode
 // storage errors, or API failure fail silent — never an error.
 (function () {
@@ -34,7 +34,7 @@
   var el = document.querySelector("[data-visit-count]");
   if (!row || !el) return;
   var KEY = "lb-visit-ts";
-  var WINDOW = 24 * 60 * 60 * 1000;
+  var WINDOW = 30 * 60 * 1000;
   var last = 0;
   try { last = +localStorage.getItem(KEY) || 0; } catch (e) {}
   var fresh = Date.now() - last > WINDOW;
