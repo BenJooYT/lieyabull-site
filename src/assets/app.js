@@ -24,3 +24,19 @@
     });
   });
 })();
+
+// Visit odometer (Abacus hit counter). Row stays hidden until a count
+// loads; adblockers, offline, or API failure fail silent — never an error.
+(function () {
+  var row = document.querySelector("[data-visits]");
+  var el = document.querySelector("[data-visit-count]");
+  if (!row || !el) return;
+  fetch("https://abacus.jasoncameron.dev/hit/lieyabull-site/visits")
+    .then(function (r) { if (!r.ok) throw new Error("bad status"); return r.json(); })
+    .then(function (d) {
+      if (typeof d.value !== "number") throw new Error("bad payload");
+      el.textContent = d.value.toLocaleString("en-US");
+      row.hidden = false;
+    })
+    .catch(function () {});
+})();
