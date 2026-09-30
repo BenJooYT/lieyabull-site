@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% if title %}{{ title }} — {% endif %}Lieyabull · workshop log</title>
+  <meta name="description" content="{{ description or site.description }}">
+  <link rel="stylesheet" href="/assets/style.css">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <div class="topbar" aria-hidden="true"></div>
+  <header class="masthead">
+    <div class="masthead-inner">
+      <div>
+        <p class="overline">Workshop log · {{ site.handles }}</p>
+        <p class="brand"><a href="/">Lieyabull</a></p>
+        <p class="sub">{{ site.description }}</p>
+      </div>
+      <dl class="ledger-box" aria-label="Log metadata">
+        <div><dt>Issue</dt><dd>No. {{ site.issueNo }}</dd></div>
+        <div><dt>Arcade</dt><dd><a href="{{ site.arcadeUrl }}">browser-games ↗</a></dd></div>
+        <div><dt>Code</dt><dd><a href="https://github.com/BenJooYT">github ↗</a></dd></div>
+      </dl>
+    </div>
+    <nav class="ledger-nav" aria-label="Sections">
+      <ol>
+        <li><a href="/" {% if page.url == "/" %}aria-current="page"{% endif %}><span class="n">01</span> Shelf</a></li>
+        <li><a href="/games/" {% if page.url == "/games/" %}aria-current="page"{% endif %}><span class="n">02</span> Arcade</a></li>
+        <li><a href="/projects/" {% if page.url == "/projects/" %}aria-current="page"{% endif %}><span class="n">03</span> Projects</a></li>
+        <li><a href="/lab/" {% if page.url == "/lab/" %}aria-current="page"{% endif %}><span class="n">04</span> Lab</a></li>
+        <li><a href="/now/" {% if page.url == "/now/" %}aria-current="page"{% endif %}><span class="n">05</span> Now</a></li>
+        <li><a href="/about/" {% if page.url == "/about/" %}aria-current="page"{% endif %}><span class="n">06</span> About</a></li>
+      </ol>
+    </nav>
+  </header>
+  <main id="main">
+    {{ content | safe }}
+  </main>
+  <footer class="colophon">
+    <div class="colophon-inner">
+      <p><strong>Lieyabull</strong> — {{ site.handles }}. Kept by hand, no template. © {{ "" | year }}</p>
+      <p class="fine">Set in system serif + mono. No trackers, no webfonts, no frameworks on the page. <a href="{{ site.gamesRepo }}">Games repo ↗</a></p>
+    </div>
+  </footer>
+  <script src="/assets/app.js" defer></script>
+</body>
+</html>

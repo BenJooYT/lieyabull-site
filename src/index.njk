@@ -1,0 +1,73 @@
+---
+layout: base.njk
+title: Shelf
+description: Lieyabull's workshop shelf — featured builds, arcade picks, and the latest notes.
+---
+<div class="page-head">
+  <p class="kicker">01 · Shelf — the den at a glance</p>
+  <h1>Stuff I'm building, kept in one place.</h1>
+  <p class="lede">Games, Minecraft contraptions, and small experiments. Unfinished counts here — entries say what state they're in.</p>
+</div>
+
+<div class="shelf">
+  <div>
+    <h2 class="section-label"><span>Currently building</span></h2>
+    <article class="entry">
+      <div class="entry-top">
+        <span class="entry-index">a/</span>
+        <h3 class="entry-title"><a href="/projects/">Dung</a></h3>
+        <span class="stamp building">building</span>
+      </div>
+      <p class="blurb">Minecraft dungeon / roguelite Paper plugin. Page is an honest placeholder until the first playable build lands. <a href="/projects/">Project notes →</a></p>
+    </article>
+
+    <h2 class="section-label"><span>Featured</span><a href="/projects/">all projects →</a></h2>
+    {% for p in projects %}
+    <article class="entry">
+      <div class="entry-top">
+        <span class="entry-index">{{ loop.index }}/</span>
+        <h3 class="entry-title"><a href="/projects/">{{ p.title }}</a></h3>
+        <span class="stamp {{ p.status }}">{{ p.statusLabel }}</span>
+      </div>
+      <p class="blurb">{{ p.oneliner }}</p>
+    </article>
+    {% endfor %}
+
+    <h2 class="section-label"><span>Arcade picks</span><a href="/games/">full arcade →</a></h2>
+    {% for g in games | slice(0, 3) %}
+    <article class="entry">
+      <div class="entry-top">
+        <span class="entry-index">g{{ loop.index }}/</span>
+        <h3 class="entry-title"><a href="/games/">{{ g.title }}</a></h3>
+        <span class="stamp {{ g.status }}">{{ g.status }}</span>
+        {% if g.version != "—" %}<span class="tag">v{{ g.version }}</span>{% endif %}
+      </div>
+      <p class="blurb">{{ g.blurb }}</p>
+      <p class="entry-meta"><span>{{ g.players }}</span><span>via arcade ↗</span></p>
+    </article>
+    {% endfor %}
+
+    <h2 class="section-label"><span>Fresh from the lab</span><a href="/lab/">all notes →</a></h2>
+    {% for e in lab | slice(0, 3) %}
+    <article class="entry">
+      <div class="entry-top">
+        <span class="entry-index">l{{ loop.index }}/</span>
+        <h3 class="entry-title"><a href="/lab/">{{ e.title }}</a></h3>
+        <span class="stamp {{ e.status }}">{{ e.status }}</span>
+      </div>
+      <p class="blurb">{{ e.text }}</p>
+    </article>
+    {% endfor %}
+  </div>
+
+  <aside class="margin-note" aria-label="Now snapshot">
+    <h2>Now · <a href="/now/">full page</a></h2>
+    <dl>
+      <div><dt>Building</dt><dd>{{ now.building }}</dd></div>
+      <div><dt>Playing</dt><dd>{{ now.playing }}</dd></div>
+      <div><dt>Learning</dt><dd>{{ now.learning }}</dd></div>
+      <div><dt>Last experiment</dt><dd>{{ now.lastexperiment }}</dd></div>
+    </dl>
+    <p class="fine">Edited by hand in <code>src/_data/now.json</code>.</p>
+  </aside>
+</div>

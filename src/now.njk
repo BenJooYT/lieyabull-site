@@ -1,0 +1,18 @@
+---
+layout: base.njk
+title: Now
+description: What Lieyabull is doing right now — edited by hand.
+---
+<div class="page-head">
+  <p class="kicker">05 · Now</p>
+  <h1>Now.</h1>
+  <p class="lede">Updated {{ now.updated }}. To change this page, edit <code>src/_data/now.json</code> — five fields, no markup.</p>
+</div>
+
+<dl class="now-grid">
+  <div><dt>Currently building</dt></div><div><dd>{{ now.building }}</dd></div>
+  <div><dt>Playing</dt></div><div><dd>{{ now.playing }}</dd></div>
+  <div><dt>Learning</dt></div><div><dd>{{ now.learning }}</dd></div>
+  <div><dt>Current rabbit hole</dt></div><div><dd>{{ now.rabbithole }}</dd></div>
+  <div><dt>Last experiment</dt></div><div><dd>{{ now.lastexperiment }}</dd></div>
+</dl>

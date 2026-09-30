@@ -1,0 +1,72 @@
+[
+  {
+    "title": "Breakout Blast",
+    "dir": "1player/breakout-blast",
+    "kind": "solo",
+    "status": "playable",
+    "version": "1.12",
+    "players": "Solo",
+    "blurb": "Brick-breaker with combos, bombs, lasers and shields. Best score is saved in the browser.",
+    "controls": "Mouse / arrows / touch halves to move · Space to launch · F fullscreen · P pause · M mute"
+  },
+  {
+    "title": "Neon Drift",
+    "dir": "1player/neon-drift",
+    "kind": "solo",
+    "status": "playable",
+    "version": "—",
+    "players": "Solo",
+    "blurb": "Top-down time-trial racer: fresh seeded track every day, per-day top runs, exportable ghost replays.",
+    "controls": "Keyboard / touch — see in-game help"
+  },
+  {
+    "title": "Pong Duo",
+    "dir": "hybrid1-2/pong-duo",
+    "kind": "solo",
+    "status": "playable",
+    "version": "—",
+    "players": "Solo vs AI · 2P one keyboard",
+    "blurb": "Solo vs AI or 2P on one keyboard. Opens straight from index.html — no server.",
+    "controls": "One-keyboard 2P · solo vs AI — see in-game help"
+  },
+  {
+    "title": "Neon Pong Showdown",
+    "dir": "hybrid1-2/neon-pong",
+    "kind": "lan",
+    "status": "lan-only",
+    "version": "1.30",
+    "players": "2P LAN · solo vs AI",
+    "blurb": "Power-up Pong: expand, shrink, turbo, slow, shield, freeze. Spin shots, overdrive, sudden death.",
+    "controls": "Needs the Python server on your LAN — see repo README"
+  },
+  {
+    "title": "Tank Duel",
+    "dir": "2players/tank-duel",
+    "kind": "lan",
+    "status": "lan-only",
+    "version": "—",
+    "players": "2P LAN",
+    "blurb": "Maze tanks, bouncing shells, weapon pickups. Host runs the server, both join over Wi-Fi.",
+    "controls": "Needs the Python server on your LAN — see repo README"
+  },
+  {
+    "title": "Bomb Tag",
+    "dir": "2players/bomb-tag",
+    "kind": "lan",
+    "status": "lan-only",
+    "version": "—",
+    "players": "2P LAN",
+    "blurb": "Hot-potato chase with dash escapes. Host runs the server, both join over Wi-Fi.",
+    "controls": "Needs the Python server on your LAN — see repo README"
+  },
+  {
+    "title": "Echo Hunt",
+    "dir": "2players/echo-hunt",
+    "kind": "lan",
+    "status": "lan-only",
+    "version": "—",
+    "players": "2P LAN",
+    "blurb": "LAN hide-and-seek experiment. Host runs the server, both join over Wi-Fi.",
+    "controls": "Needs the Python server on your LAN — see repo README"
+  }
+]

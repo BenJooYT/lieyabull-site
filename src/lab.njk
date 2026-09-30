@@ -1,0 +1,30 @@
+---
+layout: base.njk
+title: Lab
+description: Small experiments and notes that don't need a full project page.
+---
+<div class="page-head">
+  <p class="kicker">04 · Lab — experiment archive</p>
+  <h1>Small things, kept anyway.</h1>
+  <p class="lede">Browser toys, proc-gen, circuits, Minecraft and AI notes. To add one: append an entry to <code>src/_data/lab.json</code> — title, status, tags, one honest paragraph.</p>
+</div>
+
+<div class="filter-row" role="search">
+  <label for="q">Filter</label>
+  <input id="q" type="search" data-filter-search placeholder="e.g. vr, minecraft, electronics…" autocomplete="off">
+  <button class="chip" data-filter-chip="minecraft" aria-pressed="false">minecraft</button>
+  <button class="chip" data-filter-chip="vr" aria-pressed="false">vr</button>
+  <button class="chip" data-filter-chip="browser" aria-pressed="false">browser</button>
+</div>
+
+{% for e in lab %}
+<article class="entry" data-filter-item="{{ e.title }} {{ e.tags | join(' ') }} {{ e.text }}">
+  <div class="entry-top">
+    <span class="entry-index">{{ loop.index | pad2 }}/</span>
+    <h2 class="entry-title">{{ e.title }}</h2>
+    <span class="stamp {{ e.status }}">{{ e.status }}</span>
+  </div>
+  <p class="blurb">{{ e.text }}</p>
+  <p class="entry-meta">{% for t in e.tags %}<span class="tag">{{ t }}</span>{% endfor %}</p>
+</article>
+{% endfor %}

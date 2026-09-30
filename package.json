@@ -1,0 +1,17 @@
+{
+  "name": "lieyabull-site",
+  "version": "1.0.0",
+  "description": "Lieyabull — personal workshop site (Eleventy, zero client deps)",
+  "scripts": {
+    "dev": "node node_modules/@11ty/eleventy/cmd.cjs --serve",
+    "build": "node node_modules/@11ty/eleventy/cmd.cjs",
+    "install:phone": "npm install --no-bin-links"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "@11ty/eleventy": "^3.1.6"
+  }
+}

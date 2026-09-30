@@ -1,0 +1,36 @@
+---
+layout: base.njk
+title: Arcade
+description: Browser games library — solo games playable on the arcade, LAN games with honest server notes.
+---
+<div class="page-head">
+  <p class="kicker">02 · Arcade</p>
+  <h1>Game library.</h1>
+  <p class="lede">Solo games run on the arcade; LAN games need a Python server on your Wi-Fi, so this shelf links out instead of pretending to embed them. Play + source live at <a href="{{ site.arcadeUrl }}">browser-games ↗</a> and <a href="{{ site.gamesRepo }}">the games repo ↗</a>.</p>
+</div>
+
+<div class="filter-row" role="search">
+  <label for="q">Filter</label>
+  <input id="q" type="search" data-filter-search placeholder="e.g. pong, solo, lan…" autocomplete="off">
+  <button class="chip" data-filter-chip="solo" aria-pressed="false">solo</button>
+  <button class="chip" data-filter-chip="lan" aria-pressed="false">lan</button>
+</div>
+
+<ol style="list-style:none;margin:0;padding:0">
+{% for g in games %}
+  <li class="entry" data-filter-item="{{ g.title }} {{ g.players }} {{ g.kind }} {{ g.blurb }}">
+    <div class="entry-top">
+      <span class="entry-index">{{ loop.index | pad2 }}/</span>
+      <h2 class="entry-title">{{ g.title }}</h2>
+      <span class="stamp {{ g.status }}">{{ g.status }}</span>
+      {% if g.version != "—" %}<span class="tag">v{{ g.version }}</span>{% endif %}
+    </div>
+    <p class="blurb">{{ g.blurb }}</p>
+    <p class="entry-meta"><span>{{ g.players }}</span><span>{{ g.dir }}</span></p>
+    <details>
+      <summary>Controls &amp; how to run</summary>
+      <p class="controls">{{ g.controls }}. Source folder <code>{{ g.dir }}</code> in <a href="{{ site.gamesRepo }}">the repo ↗</a>. {% if g.kind == "solo" %}Also playable at <a href="{{ site.arcadeUrl }}">the arcade ↗</a>.{% else %}Run the folder's server script, then open the printed LAN URL on both devices.{% endif %}</p>
+    </details>
+  </li>
+{% endfor %}
+</ol>

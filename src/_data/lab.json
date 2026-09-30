@@ -1,0 +1,32 @@
+[
+  {
+    "title": "BaritoneExtras — client Forge companion",
+    "status": "note",
+    "tags": ["minecraft", "forge", "baritone"],
+    "text": "Client-side Forge mod on top of Baritone pathfinding: automation loops, task chains, inventory helpers, GUI. Deliberately kept as a lab note here, not a featured project."
+  },
+  {
+    "title": "PAWS — Quest + touch den (Godot)",
+    "status": "note",
+    "tags": ["vr", "godot", "android"],
+    "text": "Night clearing with theriotype cubes, mirror, phantom-body rig (tail/ears/paws), same APK on Quest XR + phone touch + PC flat. See the paws folder for build notes."
+  },
+  {
+    "title": "Neon Drift daily seeds + ghost replays",
+    "status": "note",
+    "tags": ["browser", "procgen"],
+    "text": "Seeded track of the day + per-day tops + exportable ghosts. Small procedural-generation study that shipped inside a game."
+  },
+  {
+    "title": "Electronics bench — placeholder",
+    "status": "placeholder",
+    "tags": ["electronics"],
+    "text": "Reserved slot. No claims yet — first circuit notes land here."
+  },
+  {
+    "title": "On-device AI notes — placeholder",
+    "status": "placeholder",
+    "tags": ["android", "ai"],
+    "text": "Reserved slot for Android / local-inference experiments. Nothing published yet."
+  }
+]

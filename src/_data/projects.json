@@ -1,0 +1,25 @@
+[
+  {
+    "slug": "dung",
+    "title": "Dung",
+    "status": "building",
+    "statusLabel": "building",
+    "oneliner": "Minecraft dungeon / roguelite Paper plugin — currently being built.",
+    "body": "This page is a placeholder on purpose. No invented feature lists, tech claims, or screenshots until there is something real to show. When the first playable build exists, this entry gets: what it is, how to run it, and a short changelog.",
+    "tags": ["minecraft", "paper", "roguelite"],
+    "links": [],
+    "note": "TODO(owner): fill in when the first build lands."
+  },
+  {
+    "slug": "mineflayer-companion",
+    "title": "Mineflayer Companion (Billy)",
+    "status": "active",
+    "statusLabel": "active",
+    "oneliner": "Follow/guard companion + area-select automine + survival upkeep for MC 1.21.9.",
+    "body": "Node bot (mineflayer + pathfinder + collectblock + pvp + armor-manager + auto-eat + tool). Chat commands with ! prefix or by name, typo suggestions, queued jobs, stuck protection with honest reports, selection-based mining/quarry/chop/farm/lightup, chest labels, waypoints, persistence across restarts. Streams a first-person browser view with selection + path overlay; control page on a second port.",
+    "tags": ["minecraft", "mineflayer", "automation", "node"],
+    "links": [
+      { "label": "repo", "url": "https://github.com/BenJooYT/mineflayer-companion" }
+    ]
+  }
+]
