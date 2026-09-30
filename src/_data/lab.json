@@ -15,7 +15,9 @@
     "title": "Neon Drift daily seeds + ghost replays",
     "status": "note",
     "tags": ["browser", "procgen"],
-    "text": "Seeded track of the day + per-day tops + exportable ghosts. Small procedural-generation study that shipped inside a game."
+    "text": "Seeded track of the day + per-day tops + exportable ghosts. Small procedural-generation study that shipped inside a game.",
+    "repo": "https://github.com/CursedOne0u0/local-browser-games/tree/main/local-browser-games/1player/neon-drift",
+    "site": "https://benjooyt.github.io/browser-games/games/local-browser-games/1player/neon-drift/"
   },
   {
     "title": "Electronics bench — placeholder",

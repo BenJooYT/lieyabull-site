@@ -27,9 +27,13 @@ description: Browser games library — solo games playable on the arcade, LAN ga
     </div>
     <p class="blurb">{{ g.blurb }}</p>
     <p class="entry-meta"><span>{{ g.players }}</span><span>{{ g.dir }}</span></p>
+    <p class="btn-row">
+      {% if g.site %}<a class="btn" href="{{ g.site }}">play ↗</a>{% endif %}
+      <a class="btn" href="{{ g.repo }}">repo ↗</a>
+    </p>
     <details>
       <summary>Controls &amp; how to run</summary>
-      <p class="controls">{{ g.controls }}. Source folder <code>{{ g.dir }}</code> in <a href="{{ site.gamesRepo }}">the repo ↗</a>. {% if g.kind == "solo" %}Also playable at <a href="{{ site.arcadeUrl }}">the arcade ↗</a>.{% else %}Run the folder's server script, then open the printed LAN URL on both devices.{% endif %}</p>
+      <p class="controls">{{ g.controls }}. Source folder <code>{{ g.dir }}</code> in <a href="{{ g.repo }}">the repo ↗</a>. {% if g.site %}Also playable at <a href="{{ g.site }}">the arcade ↗</a>.{% else %}Run the folder's server script, then open the printed LAN URL on both devices.{% endif %}</p>
     </details>
   </li>
 {% endfor %}

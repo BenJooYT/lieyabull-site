@@ -25,6 +25,12 @@ description: Small experiments and notes that don't need a full project page.
     <span class="stamp {{ e.status }}">{{ e.status }}</span>
   </div>
   <p class="blurb">{{ e.text }}</p>
+  {% if e.repo or e.site %}
+  <p class="btn-row">
+    {% if e.site %}<a class="btn" href="{{ e.site }}">site ↗</a>{% endif %}
+    {% if e.repo %}<a class="btn" href="{{ e.repo }}">repo ↗</a>{% endif %}
+  </p>
+  {% endif %}
   <p class="entry-meta">{% for t in e.tags %}<span class="tag">{{ t }}</span>{% endfor %}</p>
 </article>
 {% endfor %}

@@ -1,12 +1,12 @@
 ---
 layout: base.njk
 title: Projects
-description: Featured builds — Dung and the Mineflayer companion. Small on purpose.
+description: Featured builds — Dung, BSnake, and the Mineflayer companion.
 ---
 <div class="page-head">
   <p class="kicker">03 · Projects</p>
   <h1>Featured builds.</h1>
-  <p class="lede">Kept minimal on purpose: two entries with full notes. Everything else lives in the <a href="{{ '/lab/' | url }}">lab</a> as short notes.</p>
+  <p class="lede">Featured builds with honest notes. Everything else lives in the <a href="{{ '/lab/' | url }}">lab</a> as short notes.</p>
 </div>
 
 {% for p in projects %}
@@ -18,9 +18,13 @@ description: Featured builds — Dung and the Mineflayer companion. Small on pur
   </div>
   <p class="blurb"><strong>{{ p.oneliner }}</strong></p>
   <p class="blurb">{{ p.body }}</p>
+  {% if p.links.length %}
+  <p class="btn-row">
+    {% for l in p.links %}<a class="btn" href="{{ l.url }}">{{ l.label }} ↗</a>{% endfor %}
+  </p>
+  {% endif %}
   <p class="entry-meta">
     {% for t in p.tags %}<span class="tag">{{ t }}</span>{% endfor %}
-    {% for l in p.links %}<span><a href="{{ l.url }}">{{ l.label }} ↗</a></span>{% endfor %}
     {% if p.note %}<span>{{ p.note }}</span>{% endif %}
   </p>
 </article>
