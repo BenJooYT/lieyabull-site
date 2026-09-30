@@ -28,7 +28,7 @@
 // Visit odometer (Abacus hit counter). Counts at most once per browser per
 // 30min: fresh visitors HIT (increment + show), recent visitors GET (show only).
 // Row stays hidden until a count loads; adblockers, offline, private-mode
-// storage errors, or API failure fail silent — never an error.
+// storage errors, or API failure fail silent, never an error.
 (function () {
   var row = document.querySelector("[data-visits]");
   var el = document.querySelector("[data-visit-count]");
@@ -48,4 +48,26 @@
       if (fresh) { try { localStorage.setItem(KEY, String(Date.now())); } catch (e) {} }
     })
     .catch(function () {});
+})();
+
+// Live version badges: entries carrying data-live-version fetch their own
+// version.json (the same file their updater reads) and refresh the stamp +
+// download button. Pinned HTML values stay as the fallback.
+(function () {
+  var stamps = document.querySelectorAll("[data-live-version]");
+  Array.prototype.forEach.call(stamps, function (stamp) {
+    var card = stamp.closest("article") || document;
+    fetch(stamp.getAttribute("data-live-version"))
+      .then(function (r) { if (!r.ok) throw new Error("bad status"); return r.json(); })
+      .then(function (d) {
+        if (!d || typeof d.versionName !== "string") throw new Error("bad payload");
+        stamp.textContent = "v" + d.versionName;
+        var apk = card.querySelector("[data-live-apk]");
+        if (apk && typeof d.downloadUrl === "string") {
+          apk.setAttribute("href", d.downloadUrl);
+          apk.textContent = "apk v" + d.versionName + " \u2197";
+        }
+      })
+      .catch(function () {});
+  });
 })();

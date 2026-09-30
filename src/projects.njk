@@ -1,7 +1,7 @@
 ---
 layout: base.njk
 title: Projects
-description: Featured builds — Dung, BSnake, and the Mineflayer companion.
+description: Featured builds: Dung, BSnake, and the Mineflayer companion.
 ---
 <div class="page-head">
   <p class="kicker">03 · Projects</p>
@@ -14,13 +14,13 @@ description: Featured builds — Dung, BSnake, and the Mineflayer companion.
   <div class="entry-top">
     <span class="entry-index">{{ loop.index | pad2 }}/</span>
     <h2 class="entry-title">{{ p.title }}</h2>
-    <span class="stamp {{ p.status }}">{{ p.statusLabel }}</span>
+    <span class="stamp {{ p.status }}"{% if p.live %} data-live-version="{{ p.live.versionUrl }}"{% endif %}>{{ p.statusLabel }}</span>
   </div>
   <p class="blurb"><strong>{{ p.oneliner }}</strong></p>
   <p class="blurb">{{ p.body }}</p>
   {% if p.links.length %}
   <p class="btn-row">
-    {% for l in p.links %}<a class="btn" href="{{ l.url }}">{{ l.label }} ↗</a>{% endfor %}
+    {% for l in p.links %}<a class="btn" href="{{ l.url }}"{% if l.liveApk %} data-live-apk{% endif %}>{{ l.label }} ↗</a>{% endfor %}
   </p>
   {% endif %}
   <p class="entry-meta">

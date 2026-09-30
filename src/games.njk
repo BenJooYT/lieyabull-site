@@ -1,7 +1,7 @@
 ---
 layout: base.njk
 title: Arcade
-description: Browser games library — solo games playable on the arcade, LAN games with honest server notes.
+description: Browser games library: solo games playable on the arcade, LAN games with honest server notes.
 ---
 <div class="page-head">
   <p class="kicker">02 · Arcade</p>
@@ -23,7 +23,7 @@ description: Browser games library — solo games playable on the arcade, LAN ga
       <span class="entry-index">{{ loop.index | pad2 }}/</span>
       <h2 class="entry-title">{{ g.title }}</h2>
       <span class="stamp {{ g.status }}">{{ g.status }}</span>
-      {% if g.version != "—" %}<span class="tag">v{{ g.version }}</span>{% endif %}
+      {% if g.version %}<span class="tag">v{{ g.version }}</span>{% endif %}
     </div>
     <p class="blurb">{{ g.blurb }}</p>
     <p class="entry-meta"><span>{{ g.players }}</span><span>{{ g.dir }}</span></p>

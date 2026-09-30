@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>{% if title %}{{ title }} — {% endif %}Lieyabull · workshop log</title>
+  <title>{% if title %}{{ title }}: {% endif %}Lieyabull · workshop log</title>
   <meta name="description" content="{{ description or site.description }}">
   <link rel="stylesheet" href="{{ '/assets/style.css' | url }}">
 </head>
@@ -40,7 +40,7 @@
   </main>
   <footer class="colophon">
     <div class="colophon-inner">
-      <p><strong>Lieyabull</strong> — {{ site.handles }}. Kept by hand, no template. © {{ "" | year }}</p>
+      <p><strong>Lieyabull</strong>, {{ site.handles }}. Kept by hand, no template. © {{ "" | year }}</p>
       <p class="fine">Set in system serif + mono. No trackers, no webfonts, no frameworks on the page. <a href="{{ site.gamesRepo }}">Games repo ↗</a></p>
     </div>
   </footer>

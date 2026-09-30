@@ -4,11 +4,18 @@
     "title": "Dung",
     "status": "building",
     "statusLabel": "building",
-    "oneliner": "Minecraft dungeon / roguelite Paper plugin — currently being built.",
+    "oneliner": "Minecraft dungeon / roguelite Paper plugin, currently being built.",
     "body": "This page is a placeholder on purpose. No invented feature lists, tech claims, or screenshots until there is something real to show. When the first playable build exists, this entry gets: what it is, how to run it, and a short changelog.",
-    "tags": ["minecraft", "paper", "roguelite"],
+    "tags": [
+      "minecraft",
+      "paper",
+      "roguelite"
+    ],
     "links": [
-      { "label": "repo", "url": "https://github.com/BenJooYT/Dung" }
+      {
+        "label": "repo",
+        "url": "https://github.com/BenJooYT/Dung"
+      }
     ],
     "note": "TODO(owner): fill in when the first build lands."
   },
@@ -17,13 +24,28 @@
     "title": "BSnake",
     "status": "active",
     "statusLabel": "v1.7.7",
-    "oneliner": "Snake, but with teeth — dodge bosses, hoard healing fruit, outgrow friends on LAN. Android (Java, no libraries).",
-    "body": "Two modes: Arcade (bosses + progression) and Classic (pure snake) on a toroidal grid with swipe controls and a 2-item input queue. Boss system: CHASER, WALL_BUILDER (destructible walls, destroyable by surrounding them in a closed loop), HEALER, and MIRROR (eating its fruit flips your controls for 5s). Every Arcade run starts with 3 random challenges from a pool of 20; top-20 leaderboard; LAN multiplayer with host/client discovery; in-app update checker. Everything drawn with Canvas shapes, all audio synthesized (Markov-chain menu music) — zero external assets.",
-    "tags": ["android", "java", "game", "lan"],
+    "oneliner": "Snake, but with teeth: dodge bosses, hoard healing fruit, outgrow friends on LAN. Android (Java, no libraries).",
+    "body": "Two modes: Arcade (bosses + progression) and Classic (pure snake) on a toroidal grid with swipe controls and a 2-item input queue. Boss system: CHASER, WALL_BUILDER (destructible walls, destroyable by surrounding them in a closed loop), HEALER, and MIRROR (eating its fruit flips your controls for 5s). Every Arcade run starts with 3 random challenges from a pool of 20; top-20 leaderboard; LAN multiplayer with host/client discovery; in-app update checker. Everything drawn with Canvas shapes, all audio synthesized (Markov-chain menu music) with zero external assets.",
+    "tags": [
+      "android",
+      "java",
+      "game",
+      "lan"
+    ],
     "links": [
-      { "label": "repo", "url": "https://github.com/BenJooYT/BSnake" },
-      { "label": "apk v1.7.7", "url": "https://github.com/BenJooYT/BSnake/releases/download/v1.7.7/BSnake-v1.7.7.apk" }
-    ]
+      {
+        "label": "repo",
+        "url": "https://github.com/BenJooYT/BSnake"
+      },
+      {
+        "label": "apk",
+        "url": "https://github.com/BenJooYT/BSnake/releases/download/v1.7.7/BSnake-v1.7.7.apk",
+        "liveApk": true
+      }
+    ],
+    "live": {
+      "versionUrl": "https://raw.githubusercontent.com/BenJooYT/BSnake/main/version.json"
+    }
   },
   {
     "slug": "mineflayer-companion",
@@ -32,8 +54,13 @@
     "statusLabel": "active",
     "oneliner": "Follow/guard companion + area-select automine + survival upkeep for MC 1.21.9.",
     "body": "Node bot (mineflayer + pathfinder + collectblock + pvp + armor-manager + auto-eat + tool). Chat commands with ! prefix or by name, typo suggestions, queued jobs, stuck protection with honest reports, selection-based mining/quarry/chop/farm/lightup, chest labels, waypoints, persistence across restarts. Streams a first-person browser view with selection + path overlay; control page on a second port.",
-    "tags": ["minecraft", "mineflayer", "automation", "node"],
+    "tags": [
+      "minecraft",
+      "mineflayer",
+      "automation",
+      "node"
+    ],
     "links": [],
-    "note": "Repo is private for now — no public link yet."
+    "note": "Repo is private for now, so no public link yet."
   }
 ]
