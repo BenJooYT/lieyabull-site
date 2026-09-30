@@ -18,7 +18,7 @@
     "status": "playable",
     "players": "Solo",
     "blurb": "Top-down time-trial racer: fresh seeded track every day, per-day top runs, exportable ghost replays.",
-    "controls": "Keyboard / touch \u2014 see in-game help",
+    "controls": "Keyboard / touch (see in-game help)",
     "repo": "https://github.com/CursedOne0u0/local-browser-games/tree/main/local-browser-games/1player/neon-drift",
     "site": "https://benjooyt.github.io/browser-games/games/local-browser-games/1player/neon-drift/"
   },
@@ -28,8 +28,8 @@
     "kind": "solo",
     "status": "playable",
     "players": "Solo vs AI \u00b7 2P one keyboard",
-    "blurb": "Solo vs AI or 2P on one keyboard. Opens straight from index.html \u2014 no server.",
-    "controls": "One-keyboard 2P \u00b7 solo vs AI \u2014 see in-game help",
+    "blurb": "Solo vs AI or 2P on one keyboard. Opens straight from index.html, no server needed.",
+    "controls": "One-keyboard 2P and solo vs AI (see in-game help)",
     "repo": "https://github.com/CursedOne0u0/local-browser-games/tree/main/local-browser-games/hybrid1-2/pong-duo",
     "site": "https://benjooyt.github.io/browser-games/games/local-browser-games/hybrid1-2/pong-duo/"
   },
@@ -41,7 +41,7 @@
     "version": "1.30",
     "players": "2P LAN \u00b7 solo vs AI",
     "blurb": "Power-up Pong: expand, shrink, turbo, slow, shield, freeze. Spin shots, overdrive, sudden death.",
-    "controls": "Needs the Python server on your LAN \u2014 see repo README",
+    "controls": "Needs the Python server on your LAN (see the repo README)",
     "repo": "https://github.com/CursedOne0u0/local-browser-games/tree/main/local-browser-games/hybrid1-2/neon-pong"
   },
   {
@@ -51,7 +51,7 @@
     "status": "lan-only",
     "players": "2P LAN",
     "blurb": "Maze tanks, bouncing shells, weapon pickups. Host runs the server, both join over Wi-Fi.",
-    "controls": "Needs the Python server on your LAN \u2014 see repo README",
+    "controls": "Needs the Python server on your LAN (see the repo README)",
     "repo": "https://github.com/CursedOne0u0/local-browser-games/tree/main/local-browser-games/2players/tank-duel"
   },
   {
@@ -61,7 +61,7 @@
     "status": "lan-only",
     "players": "2P LAN",
     "blurb": "Hot-potato chase with dash escapes. Host runs the server, both join over Wi-Fi.",
-    "controls": "Needs the Python server on your LAN \u2014 see repo README",
+    "controls": "Needs the Python server on your LAN (see the repo README)",
     "repo": "https://github.com/CursedOne0u0/local-browser-games/tree/main/local-browser-games/2players/bomb-tag"
   },
   {
@@ -71,7 +71,7 @@
     "status": "lan-only",
     "players": "2P LAN",
     "blurb": "LAN hide-and-seek experiment. Host runs the server, both join over Wi-Fi.",
-    "controls": "Needs the Python server on your LAN \u2014 see repo README",
+    "controls": "Needs the Python server on your LAN (see the repo README)",
     "repo": "https://github.com/CursedOne0u0/local-browser-games/tree/main/local-browser-games/2players/echo-hunt"
   }
 ]
