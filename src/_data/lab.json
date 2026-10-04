@@ -2,19 +2,30 @@
   {
     "title": "BaritoneExtras: client Forge companion",
     "status": "note",
-    "tags": ["minecraft", "forge", "baritone"],
+    "tags": [
+      "minecraft",
+      "forge",
+      "baritone"
+    ],
     "text": "Client-side Forge mod on top of Baritone pathfinding: automation loops, task chains, inventory helpers, GUI. Deliberately kept as a lab note here, not a featured project."
   },
   {
     "title": "PAWS: Quest + touch den (Godot)",
     "status": "note",
-    "tags": ["vr", "godot", "android"],
+    "tags": [
+      "vr",
+      "godot",
+      "android"
+    ],
     "text": "Night clearing with theriotype cubes, mirror, phantom-body rig (tail/ears/paws), same APK on Quest XR + phone touch + PC flat. See the paws folder for build notes."
   },
   {
     "title": "Neon Drift daily seeds + ghost replays",
     "status": "note",
-    "tags": ["browser", "procgen"],
+    "tags": [
+      "browser",
+      "procgen"
+    ],
     "text": "Seeded track of the day + per-day tops + exportable ghosts. Small procedural-generation study that shipped inside a game.",
     "repo": "https://github.com/CursedOne0u0/local-browser-games/tree/main/local-browser-games/1player/neon-drift",
     "site": "https://benjooyt.github.io/browser-games/games/local-browser-games/1player/neon-drift/"
@@ -22,13 +33,29 @@
   {
     "title": "Electronics bench (placeholder)",
     "status": "placeholder",
-    "tags": ["electronics"],
+    "tags": [
+      "electronics"
+    ],
     "text": "Reserved slot. No claims yet. First circuit notes land here."
   },
   {
     "title": "On-device AI notes (placeholder)",
     "status": "placeholder",
-    "tags": ["android", "ai"],
+    "tags": [
+      "android",
+      "ai"
+    ],
     "text": "Reserved slot for Android / local-inference experiments. Nothing published yet."
+  },
+  {
+    "title": "external-mctool: block scanner + overlay",
+    "status": "note",
+    "tags": [
+      "minecraft",
+      "fabric",
+      "overlay"
+    ],
+    "text": "Fabric client mod scans an 8-chunk radius for watched block IDs and streams matches plus camera data as JSON over localhost. A C# WinForms app draws a transparent click-through overlay from it. Personal singleplayer project.",
+    "repo": "https://github.com/BenJooYT/external-mctool"
   }
 ]
