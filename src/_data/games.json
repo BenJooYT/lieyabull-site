@@ -51,7 +51,7 @@
     "kind": "lan",
     "status": "lan-only",
     "players": "2-4P LAN",
-    "blurb": "Hot potato for 2-4 across two screens (second player joins free on each). 2P: rival scores, first to 5. 3-4P: holder −1, 5 blasts, top score wins — and the room grows at 3P.",
+    "blurb": "Hot potato for 2-4 across two screens (second player joins free on each). 2P: rival scores, first to 5. 3-4P: holder −1, 5 blasts, top score wins , and the room grows at 3P.",
     "controls": "Run python3 server.py in 2players/bomb-tag/, then open the printed URL on both devices. · 🎮 pad supported",
     "repo": "https://github.com/CursedOne0u0/local-browser-games/tree/main/local-browser-games/2players/bomb-tag",
     "version": "1.26"
