@@ -54,6 +54,21 @@
 // version.json (the same file their updater reads) and refresh the stamp +
 // download button. Pinned HTML values stay as the fallback.
 (function () {
+  function verParts(v) {
+    return String(v).replace(/^v/, "").split(/[.\-]/).map(function (x) {
+      var n = parseInt(x, 10);
+      return isNaN(n) ? -1 : n;
+    });
+  }
+  function verGte(a, b) {
+    a = verParts(a);
+    b = verParts(b);
+    for (var i = 0; i < Math.max(a.length, b.length); i++) {
+      var x = a[i] || 0, y = b[i] || 0;
+      if (x !== y) return x > y;
+    }
+    return true;
+  }
   var stamps = document.querySelectorAll("[data-live-version]");
   Array.prototype.forEach.call(stamps, function (stamp) {
     var card = stamp.closest("article") || document;
@@ -61,6 +76,7 @@
       .then(function (r) { if (!r.ok) throw new Error("bad status"); return r.json(); })
       .then(function (d) {
         if (!d || typeof d.versionName !== "string") throw new Error("bad payload");
+        if (!verGte(d.versionName, stamp.textContent.trim())) return;
         stamp.textContent = "v" + d.versionName;
         var apk = card.querySelector("[data-live-apk]");
         if (apk && typeof d.downloadUrl === "string") {

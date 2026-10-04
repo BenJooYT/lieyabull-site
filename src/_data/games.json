@@ -4,12 +4,23 @@
     "dir": "1player/breakout-blast",
     "kind": "solo",
     "status": "playable",
-    "version": "1.12",
     "players": "Solo",
-    "blurb": "Brick-breaker with combos, bombs, lasers and shields. Best score is saved in the browser.",
-    "controls": "Mouse / arrows / touch halves to move \u00b7 Space to launch \u00b7 F fullscreen \u00b7 P pause \u00b7 M mute",
+    "blurb": "Brick-breaker with combos, bombs, lasers and shields. Chain bricks without touching the paddle to build a COMBO. Your best score is saved in the browser.",
+    "controls": "Mouse / ← → / touch (hold LEFT or RIGHT half) move · Space launch / release sticky (laser auto-fires) · F fullscreen · P pause · M mute · 🎮 pad supported",
     "repo": "https://github.com/CursedOne0u0/local-browser-games/tree/main/local-browser-games/1player/breakout-blast",
+    "version": "1.18",
     "site": "https://benjooyt.github.io/browser-games/games/local-browser-games/1player/breakout-blast/"
+  },
+  {
+    "title": "Neon Pong Showdown",
+    "dir": "hybrid1-2/neon-pong",
+    "kind": "lan",
+    "status": "lan-only",
+    "players": "2P LAN · solo vs AI",
+    "blurb": "Power-up Pong: expand, shrink, turbo, slow, shield and freeze. Spin shots, overdrive, sudden death. Play 2P over LAN or solo vs AI.",
+    "controls": "Run python3 server.py in hybrid1-2/neon-pong/, then open the printed URL on both devices. · 🎮 pad supported",
+    "repo": "https://github.com/CursedOne0u0/local-browser-games/tree/main/local-browser-games/hybrid1-2/neon-pong",
+    "version": "1.38"
   },
   {
     "title": "Neon Drift",
@@ -17,32 +28,11 @@
     "kind": "solo",
     "status": "playable",
     "players": "Solo",
-    "blurb": "Top-down time-trial racer: fresh seeded track every day, per-day top runs, exportable ghost replays.",
-    "controls": "Keyboard / touch (see in-game help)",
+    "blurb": "Top-down time-trial racer. A fresh seeded track every day, live delta vs your best, sector splits, and your top 3 runs racing with you as ghosts.",
+    "controls": "WASD / arrows drive · Space handbrake · R reset · T restart lap · G rival ghost · F fullscreen · Esc menu · 🎮 pad supported",
     "repo": "https://github.com/CursedOne0u0/local-browser-games/tree/main/local-browser-games/1player/neon-drift",
+    "version": "1.16",
     "site": "https://benjooyt.github.io/browser-games/games/local-browser-games/1player/neon-drift/"
-  },
-  {
-    "title": "Pong Duo",
-    "dir": "hybrid1-2/pong-duo",
-    "kind": "solo",
-    "status": "playable",
-    "players": "Solo vs AI \u00b7 2P one keyboard",
-    "blurb": "Solo vs AI or 2P on one keyboard. Opens straight from index.html, no server needed.",
-    "controls": "One-keyboard 2P and solo vs AI (see in-game help)",
-    "repo": "https://github.com/CursedOne0u0/local-browser-games/tree/main/local-browser-games/hybrid1-2/pong-duo",
-    "site": "https://benjooyt.github.io/browser-games/games/local-browser-games/hybrid1-2/pong-duo/"
-  },
-  {
-    "title": "Neon Pong Showdown",
-    "dir": "hybrid1-2/neon-pong",
-    "kind": "lan",
-    "status": "lan-only",
-    "version": "1.30",
-    "players": "2P LAN \u00b7 solo vs AI",
-    "blurb": "Power-up Pong: expand, shrink, turbo, slow, shield, freeze. Spin shots, overdrive, sudden death.",
-    "controls": "Needs the Python server on your LAN (see the repo README)",
-    "repo": "https://github.com/CursedOne0u0/local-browser-games/tree/main/local-browser-games/hybrid1-2/neon-pong"
   },
   {
     "title": "Tank Duel",
@@ -50,28 +40,101 @@
     "kind": "lan",
     "status": "lan-only",
     "players": "2P LAN",
-    "blurb": "Maze tanks, bouncing shells, weapon pickups. Host runs the server, both join over Wi-Fi.",
-    "controls": "Needs the Python server on your LAN (see the repo README)",
-    "repo": "https://github.com/CursedOne0u0/local-browser-games/tree/main/local-browser-games/2players/tank-duel"
+    "blurb": "Maze tanks on a fresh symmetric map every round. Shells ricochet six times, weapon pickups, railguns, homing shells and mines. First to 5 rounds.",
+    "controls": "Run python3 server.py in 2players/tank-duel/, then open the printed URL on both devices. · 🎮 pad supported",
+    "repo": "https://github.com/CursedOne0u0/local-browser-games/tree/main/local-browser-games/2players/tank-duel",
+    "version": "1.25"
   },
   {
     "title": "Bomb Tag",
     "dir": "2players/bomb-tag",
     "kind": "lan",
     "status": "lan-only",
-    "players": "2P LAN",
-    "blurb": "Hot-potato chase with dash escapes. Host runs the server, both join over Wi-Fi.",
-    "controls": "Needs the Python server on your LAN (see the repo README)",
-    "repo": "https://github.com/CursedOne0u0/local-browser-games/tree/main/local-browser-games/2players/bomb-tag"
+    "players": "2-4P LAN",
+    "blurb": "Hot potato for 2-4 across two screens (second player joins free on each). 2P: rival scores, first to 5. 3-4P: holder −1, 5 blasts, top score wins — and the room grows at 3P.",
+    "controls": "Run python3 server.py in 2players/bomb-tag/, then open the printed URL on both devices. · 🎮 pad supported",
+    "repo": "https://github.com/CursedOne0u0/local-browser-games/tree/main/local-browser-games/2players/bomb-tag",
+    "version": "1.26"
+  },
+  {
+    "title": "Neon Horde Solo",
+    "dir": "1player/neon-horde-solo",
+    "kind": "solo",
+    "status": "playable",
+    "players": "Solo",
+    "blurb": "Solo survivors on an infinite void field: same arena, weapons, elites and 4-minute bosses as LAN Horde, but the game pauses for drafts and death ends the run. Time survived posts to the global board.",
+    "controls": "WASD/arrows move (auto-weapons) · draft 123 or click · Space/P pause · M mute · touch: drag to move · 🎮 pad supported",
+    "repo": "https://github.com/CursedOne0u0/local-browser-games/tree/main/local-browser-games/1player/neon-horde-solo",
+    "version": "2.0",
+    "site": "https://benjooyt.github.io/browser-games/games/local-browser-games/1player/neon-horde-solo/"
+  },
+  {
+    "title": "Pong Duo",
+    "dir": "hybrid1-2/pong-duo",
+    "kind": "solo",
+    "status": "playable",
+    "players": "Solo or 2P",
+    "blurb": "Classic Pong, pick your mode from the menu: solo against the AI on Easy / Medium / Hard, or two players on one keyboard. First to 7.",
+    "controls": "Solo: W S or mouse · 2P: P1 W S vs P2 ↑ ↓ · Space launch / pause · M mute · 🎮 pad supported",
+    "repo": "https://github.com/CursedOne0u0/local-browser-games/tree/main/local-browser-games/hybrid1-2/pong-duo",
+    "version": "1.95",
+    "site": "https://benjooyt.github.io/browser-games/games/local-browser-games/hybrid1-2/pong-duo/"
   },
   {
     "title": "Echo Hunt",
     "dir": "2players/echo-hunt",
     "kind": "lan",
     "status": "lan-only",
-    "players": "2P LAN",
-    "blurb": "LAN hide-and-seek experiment. Host runs the server, both join over Wi-Fi.",
-    "controls": "Needs the Python server on your LAN (see the repo README)",
-    "repo": "https://github.com/CursedOne0u0/local-browser-games/tree/main/local-browser-games/2players/echo-hunt"
+    "players": "2-8P LAN",
+    "blurb": "Sonar tag for 2-8. Wardens hunt on a near-black screen; Divers crack wire nodes. Roles rotate, terror radius, and the host can add AI bots.",
+    "controls": "Run python3 server.py in 2players/echo-hunt/, then open the printed URL on both devices. · 🎮 pad supported",
+    "repo": "https://github.com/CursedOne0u0/local-browser-games/tree/main/local-browser-games/2players/echo-hunt",
+    "version": "1.17"
+  },
+  {
+    "title": "Swarm Survival",
+    "dir": "hybrid1-2/swarm",
+    "kind": "solo",
+    "status": "playable",
+    "players": "Solo or 2P",
+    "blurb": "Top-down co-op arena survival: move + autofire only. Solo, solo + AI companion, or 2P local. Survive 50s waves, draft upgrades, bomb the swarm, revive your partner.",
+    "controls": "Solo: WASD + E bomb · 2P: P1 WASD vs P2 ↑←↓→ + / bomb · draft 123 / 789 · Space start · M mute · 🎮 dual pads",
+    "repo": "https://github.com/CursedOne0u0/local-browser-games/tree/main/local-browser-games/hybrid1-2/swarm",
+    "version": "1.43",
+    "site": "https://benjooyt.github.io/browser-games/games/local-browser-games/hybrid1-2/swarm/"
+  },
+  {
+    "title": "Bastion Bros",
+    "dir": "hybrid1-2/bastion",
+    "kind": "solo",
+    "status": "playable",
+    "players": "Solo or 2P",
+    "blurb": "Co-op tower defense: you ARE the build cursor. Solo, solo + AI companion, or 2P local. Hold the winding road through escalating levels.",
+    "controls": "Solo: WASD + E build · 2P: P1 WASD+E vs P2 arrows+/ · 1-7 select, T traps, P2 . cycles select · Space wave · 🎮 pad supported",
+    "repo": "https://github.com/CursedOne0u0/local-browser-games/tree/main/local-browser-games/hybrid1-2/bastion",
+    "version": "1.5-beta",
+    "site": "https://benjooyt.github.io/browser-games/games/local-browser-games/hybrid1-2/bastion/"
+  },
+  {
+    "title": "Neon Horde",
+    "dir": "2players/neon-horde",
+    "kind": "lan",
+    "status": "lan-only",
+    "players": "2-4P LAN",
+    "blurb": "2-4 hunter LAN co-op survivors on an infinite void field. Endless horde, per-player level drafts, elites, a boss every 4 minutes, touch-to-revive. Full wipe ends the run.",
+    "controls": "Run python3 server.py in 2players/neon-horde/, then open the printed URL on each device. · WASD/arrows move (auto-weapons) · draft 123 · P pause · 🎮 pad + touch supported",
+    "repo": "https://github.com/CursedOne0u0/local-browser-games/tree/main/local-browser-games/2players/neon-horde",
+    "version": "2.2"
+  },
+  {
+    "title": "Bastion Bros LAN",
+    "dir": "2players/bastion",
+    "kind": "lan",
+    "status": "lan-only",
+    "players": "2-4P LAN",
+    "blurb": "LAN co-op tower defense for 2-4 defenders, each on their own screen. Shared gold, build anytime (+25% mid-wave), repair at 50%. Base has 20 HP.",
+    "controls": "Run python3 server.py in 2players/bastion/, then open the printed URL on each device. · move WASD/arrows/tap · 123 + E build · Enter wave · 🎮 pad supported",
+    "repo": "https://github.com/CursedOne0u0/local-browser-games/tree/main/local-browser-games/2players/bastion",
+    "version": "1.1"
   }
 ]
