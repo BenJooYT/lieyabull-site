@@ -39,13 +39,14 @@
     "text": "Reserved slot. No claims yet. First circuit notes land here."
   },
   {
-    "title": "On-device AI notes (placeholder)",
-    "status": "placeholder",
+    "title": "Taiga-S1 on Android: on-device CAD agent",
+    "status": "note",
     "tags": [
       "android",
       "ai"
     ],
-    "text": "Reserved slot for Android / local-inference experiments. Nothing published yet."
+    "text": "Porting Taiga-S1 (1.2M-parameter CAD agent) to Android: Termux plus Debian proot driving FreeCAD 1.0 on-phone, modeled a twin-cylinder engine part by part (19 parts, IoU 1.0 each). Repo has the full run plus an offline Three.js viewer.",
+    "repo": "https://github.com/BenJooYT/taiga-s1-android"
   },
   {
     "title": "external-mctool: block scanner + overlay",
