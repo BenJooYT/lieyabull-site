@@ -1,12 +1,15 @@
 ---
 layout: base.njk
 title: Projects
+titleHu: Projektek
 description: "Featured builds: Dung, BSnake, and the Mineflayer companion."
+descriptionHu: "Kiemelt építmények: Dung, BSnake és a Mineflayer companion."
 ---
+{% import "i18n.njk" as i18n %}
 <div class="page-head">
-  <p class="kicker">03 · Projects</p>
-  <h1>Featured builds.</h1>
-  <p class="lede">Featured builds with honest notes. Everything else lives in the <a href="{{ '/lab/' | url }}">lab</a> as short notes.</p>
+  <p class="kicker">{{ i18n.t("03 · Projects", "03 · Projektek") }}</p>
+  <h1>{{ i18n.t("Featured builds.", "Kiemelt építmények.") }}</h1>
+  <p class="lede">{{ i18n.t("Featured builds with honest notes. Everything else lives in the lab as short notes.", "Kiemelt építmények őszinte jegyzetekkel. Minden más a laborban él, rövid jegyzetekként.") }}</p>
 </div>
 
 {% for p in projects %}
@@ -14,10 +17,14 @@ description: "Featured builds: Dung, BSnake, and the Mineflayer companion."
   <div class="entry-top">
     <span class="entry-index">{{ loop.index | pad2 }}/</span>
     <h2 class="entry-title">{{ p.title }}</h2>
-    <span class="stamp {{ p.status }}"{% if p.live %} data-live-version="{{ p.live.versionUrl }}"{% endif %}>{{ p.statusLabel }}</span>
+    {% if p.live %}
+    <span class="stamp {{ p.status }}" data-live-version="{{ p.live.versionUrl }}">{{ p.statusLabel }}</span>
+    {% else %}
+    <span class="stamp {{ p.status }}"><span class="lang-en" lang="en">{{ p.statusLabel }}</span><span class="lang-hu" lang="hu">{{ p.statusLabelHu or p.statusLabel }}</span></span>
+    {% endif %}
   </div>
-  <p class="blurb"><strong>{{ p.oneliner }}</strong></p>
-  <p class="blurb">{{ p.body }}</p>
+  <p class="blurb"><strong>{{ i18n.t(p.oneliner, p.onelinerHu) }}</strong></p>
+  <p class="blurb">{{ i18n.t(p.body, p.bodyHu) }}</p>
   {% if p.links.length %}
   <p class="btn-row">
     {% for l in p.links %}<a class="btn" href="{{ l.url }}"{% if l.liveApk %} data-live-apk{% endif %}>{{ l.label }} ↗</a>{% endfor %}
@@ -25,7 +32,7 @@ description: "Featured builds: Dung, BSnake, and the Mineflayer companion."
   {% endif %}
   <p class="entry-meta">
     {% for t in p.tags %}<span class="tag">{{ t }}</span>{% endfor %}
-    {% if p.note %}<span>{{ p.note }}</span>{% endif %}
+    {% if p.note %}<span>{{ i18n.t(p.note, p.noteHu) }}</span>{% endif %}
   </p>
 </article>
 {% endfor %}

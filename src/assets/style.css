@@ -31,6 +31,10 @@ a { color: inherit; text-decoration-thickness: 1px; text-underline-offset: 3px; 
 a:hover { text-decoration-thickness: 2px; }
 :focus-visible { outline: 3px solid var(--focus); outline-offset: 2px; }
 
+/* Language plates: markup carries both, CSS shows the active one */
+html[data-lang="en"] .lang-hu { display: none; }
+html[data-lang="hu"] .lang-en { display: none; }
+
 /* Masthead */
 .masthead { border-bottom: 3px double var(--rule-hard); }
 .masthead-inner {
@@ -156,5 +160,22 @@ summary { cursor: pointer; min-height: 44px; display: inline-flex; align-items: 
 .colophon { border-top: 3px double var(--rule-hard); }
 .colophon-inner { max-width: 1080px; margin: 0 auto; padding: 18px 20px 40px; font-size: 15px; }
 .fine { color: var(--muted); font-size: 14px; }
+
+/* Flag switch at the foot of the page */
+.lang-switch {
+  display: flex; align-items: center; gap: 8px; flex-wrap: wrap;
+  margin-top: 14px; padding-top: 12px; border-top: 1px solid var(--rule);
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+}
+.lang-switch .label { font-size: 11px; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); }
+.flag-btn {
+  display: inline-flex; align-items: center; gap: 8px; min-height: 44px; padding: 8px 12px;
+  border: 1px solid var(--rule-hard); border-radius: 2px; background: transparent; color: var(--ink);
+  font: inherit; font-size: 13px; letter-spacing: .04em; cursor: pointer;
+}
+.flag-btn svg { display: block; width: 22px; height: 15px; border: 1px solid var(--rule-hard); }
+.flag-btn:hover { background: var(--paper-2); }
+.flag-btn[aria-pressed="true"] { background: var(--ink); color: var(--paper); }
+.flag-btn[aria-pressed="true"] svg { border-color: var(--paper); }
 
 @media (prefers-reduced-motion: reduce) { * { transition: none !important; animation: none !important; } }

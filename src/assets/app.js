@@ -25,6 +25,45 @@
   });
 })();
 
+// Language switch: the markup ships both locales; the head script restores the
+// stored choice before paint, this wires the footer flags and keeps the head
+// metadata in sync. Without JS the English plates stay visible.
+(function () {
+  var buttons = Array.prototype.slice.call(document.querySelectorAll("[data-set-lang]"));
+  if (!buttons.length) return;
+  var title = document.querySelector("title[data-en]");
+  var desc = document.querySelector('meta[name="description"][data-en]');
+  function apply(lang) {
+    lang = lang === "hu" ? "hu" : "en";
+    var root = document.documentElement;
+    root.setAttribute("data-lang", lang);
+    root.setAttribute("lang", lang);
+    buttons.forEach(function (b) {
+      b.setAttribute("aria-pressed", b.getAttribute("data-set-lang") === lang ? "true" : "false");
+    });
+    if (title) {
+      var t = title.getAttribute(lang === "hu" ? "data-hu" : "data-en");
+      if (t) title.textContent = t;
+    }
+    if (desc) {
+      var d = desc.getAttribute(lang === "hu" ? "data-hu" : "data-en");
+      if (d) desc.setAttribute("content", d);
+    }
+    Array.prototype.forEach.call(document.querySelectorAll("[data-ph-en]"), function (input) {
+      var ph = input.getAttribute(lang === "hu" ? "data-ph-hu" : "data-ph-en");
+      if (ph) input.setAttribute("placeholder", ph);
+    });
+  }
+  buttons.forEach(function (b) {
+    b.addEventListener("click", function () {
+      var lang = b.getAttribute("data-set-lang");
+      apply(lang);
+      try { localStorage.setItem("lieyabull-lang", lang); } catch (e) {}
+    });
+  });
+  apply(document.documentElement.getAttribute("data-lang") || "en");
+})();
+
 // Visit odometer (Abacus hit counter). Counts at most once per browser per
 // 30min: fresh visitors HIT (increment + show), recent visitors GET (show only).
 // Row stays hidden until a count loads; adblockers, offline, private-mode

@@ -1,37 +1,50 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-lang="en">
 <head>
   <meta charset="utf-8">
+  <script>
+  (function () {
+    var lang = "en";
+    try { lang = localStorage.getItem("lieyabull-lang") === "hu" ? "hu" : "en"; } catch (e) {}
+    document.documentElement.setAttribute("data-lang", lang);
+    document.documentElement.setAttribute("lang", lang);
+  })();
+  </script>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>{% if title %}{{ title }}: {% endif %}Lieyabull · workshop log</title>
-  <meta name="description" content="{{ description or site.description }}">
+  {% import "i18n.njk" as i18n %}
+  {% set titleEn = (title + ": " if title else "") + "Lieyabull · workshop log" %}
+  {% set titleHu = (titleHu + ": " if titleHu else "") + "Lieyabull · műhelynapló" %}
+  {% set descEn = description or site.description %}
+  {% set descHu = descriptionHu or site.descriptionHu %}
+  <title data-en="{{ titleEn }}" data-hu="{{ titleHu }}">{{ titleEn }}</title>
+  <meta name="description" data-en="{{ descEn }}" data-hu="{{ descHu }}" content="{{ descEn }}">
   <link rel="stylesheet" href="{{ '/assets/style.css' | url }}">
 </head>
 <body>
-  <a class="skip" href="#main">Skip to content</a>
+  <a class="skip" href="#main">{{ i18n.t("Skip to content", "Ugrás a tartalomra") }}</a>
   <div class="topbar" aria-hidden="true"></div>
   <header class="masthead">
     <div class="masthead-inner">
       <div>
-        <p class="overline">Workshop log · {{ site.handles }}</p>
+        <p class="overline">{{ i18n.t("Workshop log", "Műhelynapló") }} · {{ site.handles }}</p>
         <p class="brand"><a href="{{ '/' | url }}">Lieyabull</a></p>
-        <p class="sub">{{ site.description }}</p>
+        <p class="sub">{{ i18n.t(site.description, site.descriptionHu) }}</p>
       </div>
       <dl class="ledger-box" aria-label="Log metadata">
-        <div><dt>Issue</dt><dd>No. {{ site.issueNo }}</dd></div>
-        <div><dt>Arcade</dt><dd><a href="{{ site.arcadeUrl }}">browser-games ↗</a></dd></div>
-        <div><dt>Code</dt><dd><a href="https://github.com/BenJooYT">github ↗</a></dd></div>
-        <div data-visits hidden><dt>Visits</dt><dd><span data-visit-count>···</span></dd></div>
+        <div><dt>{{ i18n.t("Issue", "Szám") }}</dt><dd>{{ i18n.t("No. " + site.issueNo, "Sz. " + site.issueNo) }}</dd></div>
+        <div><dt>{{ i18n.t("Arcade", "Árkád") }}</dt><dd><a href="{{ site.arcadeUrl }}">browser-games ↗</a></dd></div>
+        <div><dt>{{ i18n.t("Code", "Kód") }}</dt><dd><a href="https://github.com/BenJooYT">github ↗</a></dd></div>
+        <div data-visits hidden><dt>{{ i18n.t("Visits", "Látogatók") }}</dt><dd><span data-visit-count>···</span></dd></div>
       </dl>
     </div>
     <nav class="ledger-nav" aria-label="Sections">
       <ol>
-        <li><a href="{{ '/' | url }}" {% if page.url == '/' %}aria-current="page"{% endif %}><span class="n">01</span> Shelf</a></li>
-        <li><a href="{{ '/games/' | url }}" {% if page.url == '/games/' %}aria-current="page"{% endif %}><span class="n">02</span> Arcade</a></li>
-        <li><a href="{{ '/projects/' | url }}" {% if page.url == '/projects/' %}aria-current="page"{% endif %}><span class="n">03</span> Projects</a></li>
-        <li><a href="{{ '/lab/' | url }}" {% if page.url == '/lab/' %}aria-current="page"{% endif %}><span class="n">04</span> Lab</a></li>
-        <li><a href="{{ '/now/' | url }}" {% if page.url == '/now/' %}aria-current="page"{% endif %}><span class="n">05</span> Now</a></li>
-        <li><a href="{{ '/about/' | url }}" {% if page.url == '/about/' %}aria-current="page"{% endif %}><span class="n">06</span> About</a></li>
+        <li><a href="{{ '/' | url }}" {% if page.url == '/' %}aria-current="page"{% endif %}><span class="n">01</span> {{ i18n.t("Shelf", "Polc") }}</a></li>
+        <li><a href="{{ '/games/' | url }}" {% if page.url == '/games/' %}aria-current="page"{% endif %}><span class="n">02</span> {{ i18n.t("Arcade", "Árkád") }}</a></li>
+        <li><a href="{{ '/projects/' | url }}" {% if page.url == '/projects/' %}aria-current="page"{% endif %}><span class="n">03</span> {{ i18n.t("Projects", "Projektek") }}</a></li>
+        <li><a href="{{ '/lab/' | url }}" {% if page.url == '/lab/' %}aria-current="page"{% endif %}><span class="n">04</span> {{ i18n.t("Lab", "Labor") }}</a></li>
+        <li><a href="{{ '/now/' | url }}" {% if page.url == '/now/' %}aria-current="page"{% endif %}><span class="n">05</span> {{ i18n.t("Now", "Most") }}</a></li>
+        <li><a href="{{ '/about/' | url }}" {% if page.url == '/about/' %}aria-current="page"{% endif %}><span class="n">06</span> {{ i18n.t("About", "Névjegy") }}</a></li>
       </ol>
     </nav>
   </header>
@@ -40,8 +53,29 @@
   </main>
   <footer class="colophon">
     <div class="colophon-inner">
-      <p><strong>Lieyabull</strong>, {{ site.handles }}. Kept by hand, no template. © {{ "" | year }}</p>
-      <p class="fine">Set in system serif + mono. No trackers, no webfonts, no frameworks on the page. <a href="{{ site.gamesRepo }}">Games repo ↗</a></p>
+      <p><strong>Lieyabull</strong>, {{ site.handles }}. {{ i18n.t("Kept by hand, no template.", "Kézzel vezetve, sablon nélkül.") }} © {{ "" | year }}</p>
+      <p class="fine">{{ i18n.t("Set in system serif + mono. No trackers, no webfonts, no frameworks on the page.", "Rendszeres serif + mono betűk. Nincs követő, nincs webfont, nincs keretrendszer az oldalon.") }} <a href="{{ site.gamesRepo }}">{{ i18n.t("Games repo ↗", "Játékok repója ↗") }}</a></p>
+      <div class="lang-switch" role="group" aria-label="Language / Nyelv">
+        <span class="label">{{ i18n.t("Language", "Nyelv") }}</span>
+        <button type="button" class="flag-btn" data-set-lang="en" aria-pressed="true" aria-label="English">
+          <svg viewBox="0 0 60 40" aria-hidden="true" focusable="false">
+            <rect width="60" height="40" fill="#012169"/>
+            <path d="M0,0 L60,40 M60,0 L0,40" stroke="#fff" stroke-width="8"/>
+            <path d="M0,0 L60,40 M60,0 L0,40" stroke="#c8102e" stroke-width="4"/>
+            <path d="M30,0 V40 M0,20 H60" stroke="#fff" stroke-width="12"/>
+            <path d="M30,0 V40 M0,20 H60" stroke="#c8102e" stroke-width="7"/>
+          </svg>
+          <span>English</span>
+        </button>
+        <button type="button" class="flag-btn" data-set-lang="hu" aria-pressed="false" aria-label="Magyar">
+          <svg viewBox="0 0 60 40" aria-hidden="true" focusable="false">
+            <rect width="60" height="40" fill="#fff"/>
+            <rect width="60" height="13.33" fill="#ce2939"/>
+            <rect y="26.67" width="60" height="13.33" fill="#477050"/>
+          </svg>
+          <span>Magyar</span>
+        </button>
+      </div>
     </div>
   </footer>
   <script src="{{ '/assets/app.js' | url }}" defer></script>

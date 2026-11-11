@@ -4,8 +4,11 @@
     "title": "Dung",
     "status": "active",
     "statusLabel": "v1.5.1",
+    "statusLabelHu": "v1.5.1",
     "oneliner": "Room-based dungeon roguelite for Paper 1.21.x: Binding of Isaac structure with MMORPG-style combat, loot, and progression.",
+    "onelinerHu": "Szobákra épülő dungeon rogue-lite Paper 1.21.x-hez: Binding of Isaac-felépítés MMORPG-stílusú harccal, zsákmánnyal és fejlődéssel.",
     "body": "Each run generates a branching floor of rooms that lock until cleared, fought with a melee arc plus weapon abilities, ending in a telegraphed boss (The Warden or The Grovekeeper) guarding the way down. Boss kills and room clears bank persistent coins and kill/full-clear stats that survive death. Java 21 on Paper 1.21.x, Gradle build. v1.5.1: sealed-room generation fixes, Combat Power retune, slower rarity pacing, and a shield CP fix.",
+    "bodyHu": "Minden futam egy elágazó szintet generál, a szobák addig zárva vannak, amíg nem tisztítod ki őket; a közelharc-ív és a fegyverképességek mellett egy előre jelzett bos (The Warden vagy The Grovekeeper) őrzi a lefelé vezető utat. A bosok és szobák után állandó érmék, valamint halál- és full-clear statisztikák gyűlnek, amelyek túlélik a halált. Java 21 Paper 1.21.x-en, Gradle build. v1.5.1: lezárt szobák generálásának javításai, Combat Power áthangolás, lassabb ritkasági tempó és pajzs-CP javítás.",
     "tags": [
       "minecraft",
       "paper",
@@ -24,8 +27,11 @@
     "title": "BSnake",
     "status": "active",
     "statusLabel": "v1.8.0",
+    "statusLabelHu": "v1.8.0",
     "oneliner": "Snake, but with teeth: dodge bosses, hoard healing fruit, outgrow friends on LAN. Android (Java, no libraries).",
+    "onelinerHu": "Kígyó, de fogakkal: kerüld a bosokat, gyűjtsd a gyógyító gyümölcsöket, nőj túl a barátaidon LAN-on. Android (Java, könyvtárak nélkül).",
     "body": "Two modes: Arcade (bosses + progression) and Classic (pure snake) on a toroidal grid with swipe controls and a 2-item input queue. Boss system: CHASER, WALL_BUILDER (destructible walls, destroyable by surrounding them in a closed loop), HEALER, and MIRROR (eating its fruit flips your controls for 5s). Every Arcade run starts with 3 random challenges from a pool of 20; top-20 leaderboard; LAN multiplayer with host/client discovery; in-app update checker. Everything drawn with Canvas shapes, all audio synthesized (Markov-chain menu music) with zero external assets. v1.8.0 adds PHANTOM (phasing boss) and SUMMONER (spawns minion snakes) plus multiplayer thread-safety fixes.",
+    "bodyHu": "Két mód: Arcade (bosok + fejlődés) és Classic (tiszta kígyó) egy tóruszos rácson, swipe-vezérléssel és 2 elemű bemeneti sorral. Bosrendszer: CHASER, WALL_BUILDER (lerombolható falak, zárt hurokkal körbevéve elpusztíthatók), HEALER és MIRROR (a gyümölcsének megevése 5 mp-re megfordítja az irányítást). Minden Arcade-futam 3 véletlen kihívással indul egy 20-as készletből; top-20 ranglista; LAN többjátékos host/kliens felfedezéssel; beépített frissítésellenőrző. Minden Canvas-alakzatokból rajzolva, minden hang szintetizálva (Markov-lánc menüzene), nulla külső asset. A v1.8.0 hozza a PHANTOM (fázisoló bos) és SUMMONER (minion kígyókat idéz) bosokat, valamint többjátékos szálbiztonsági javításokat.",
     "tags": [
       "android",
       "java",
@@ -52,8 +58,11 @@
     "title": "Mineflayer Companion (Billy)",
     "status": "active",
     "statusLabel": "active",
+    "statusLabelHu": "aktív",
     "oneliner": "Follow/guard companion + area-select automine + survival upkeep for MC 1.21.9.",
+    "onelinerHu": "Követő/őrző társ + területválasztós automatikus bányászat + túlélési ellátás MC 1.21.9-hez.",
     "body": "Node bot (mineflayer + pathfinder + collectblock + pvp + armor-manager + auto-eat + tool). Chat commands with ! prefix or by name, typo suggestions, queued jobs, stuck protection with honest reports, selection-based mining/quarry/chop/farm/lightup, chest labels, waypoints, persistence across restarts. Streams a first-person browser view with selection + path overlay; control page on a second port.",
+    "bodyHu": "Node bot (mineflayer + pathfinder + collectblock + pvp + armor-manager + auto-eat + tool). Chatparancsok ! előtaggal vagy név szerint, elgépelés-javaslatok, sorba állított feladatok, beakadásvédelem őszinte jelentésekkel, kijelölés alapú bányászat/kőfejtés/favágás/farm/világítás, ládacímkék, útpontok, újraindítás után is megmaradó állapot. Első személyű böngészőnézetet streamel kijelöléssel és útvonal-overlay-jel; vezérlőoldal egy második porton.",
     "tags": [
       "minecraft",
       "mineflayer",
@@ -61,6 +70,7 @@
       "node"
     ],
     "links": [],
-    "note": "Repo is private for now, so no public link yet."
+    "note": "Repo is private for now, so no public link yet.",
+    "noteHu": "A repó egyelőre privát, ezért nincs még nyilvános link."
   }
 ]

@@ -1,15 +1,18 @@
 ---
 layout: base.njk
 title: About
+titleHu: Névjegy
 description: Who Lieyabull is and what this site is for.
+descriptionHu: Ki az a Lieyabull, és mi célja ennek az oldalnak.
 ---
+{% import "i18n.njk" as i18n %}
 <div class="page-head">
-  <p class="kicker">06 · About</p>
-  <h1>Short version.</h1>
+  <p class="kicker">{{ i18n.t("06 · About", "06 · Névjegy") }}</p>
+  <h1>{{ i18n.t("Short version.", "Röviden.") }}</h1>
 </div>
 
 <div style="max-width:68ch">
-  <p>I'm <strong>Lieyabull</strong>, also around as Still, Stillfox, or BenJooYT. I make browser games, Minecraft things (plugins, bots, automation), and small technical experiments, some finished and some not.</p>
-  <p>This site is my den: one shelf for the games, one bench for the bigger builds, one drawer for the half-done notes, and a <a href="{{ '/now/' | url }}">now page</a> so you can see what's actually on the table. If something here is a placeholder, it says so.</p>
-  <p>Find the code on <a href="https://github.com/BenJooYT">GitHub ↗</a> and the playable games at <a href="{{ site.arcadeUrl }}">the arcade ↗</a>.</p>
+  <p><span class="lang-en" lang="en">I'm <strong>Lieyabull</strong>, also around as Still, Stillfox, or BenJooYT. I make browser games, Minecraft things (plugins, bots, automation), and small technical experiments, some finished and some not.</span><span class="lang-hu" lang="hu"><strong>Lieyabull</strong> vagyok, máshol Still, Stillfox vagy BenJooYT néven is megtalálsz. Böngészős játékokat, Minecraft-os dolgokat (pluginok, botok, automatizálás) és kisebb technikai kísérleteket készítek, néhányat befejezve, sokakat nem.</span></p>
+  <p><span class="lang-en" lang="en">This site is my den: one shelf for the games, one bench for the bigger builds, one drawer for the half-done notes, and a <a href="{{ '/now/' | url }}">now page</a> so you can see what's actually on the table. If something here is a placeholder, it says so.</span><span class="lang-hu" lang="hu">Ez az oldal az odúm: egy polc a játékoknak, egy pad a nagyobb építményeknek, egy fiók a félkész jegyzeteknek, és egy <a href="{{ '/now/' | url }}">most-oldal</a>, hogy lásd, mi van ténylegesen az asztalon. Ha valami helyfoglaló, az rajta is van.</span></p>
+  <p><span class="lang-en" lang="en">Find the code on <a href="https://github.com/BenJooYT">GitHub ↗</a> and the playable games at <a href="{{ site.arcadeUrl }}">the arcade ↗</a>.</span><span class="lang-hu" lang="hu">A kódot a <a href="https://github.com/BenJooYT">GitHubon ↗</a> találod, a játszható játékokat pedig az <a href="{{ site.arcadeUrl }}">árkádban ↗</a>.</span></p>
 </div>

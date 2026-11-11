@@ -1,39 +1,42 @@
 ---
 layout: base.njk
 title: Arcade
+titleHu: Árkád
 description: "Browser games library: solo games playable on the arcade, LAN games with honest server notes."
+descriptionHu: "Böngészős játékok tára: egyjátékos játékok az árkádban, LAN játékok őszinte szerverjegyzetekkel."
 ---
+{% import "i18n.njk" as i18n %}
 <div class="page-head">
-  <p class="kicker">02 · Arcade</p>
-  <h1>Game library.</h1>
-  <p class="lede">Solo games run on the arcade; LAN games need a Python server on your Wi-Fi, so this shelf links out instead of pretending to embed them. Play + source live at <a href="{{ site.arcadeUrl }}">browser-games ↗</a> and <a href="{{ site.gamesRepo }}">the games repo ↗</a>.</p>
+  <p class="kicker">{{ i18n.t("02 · Arcade", "02 · Árkád") }}</p>
+  <h1>{{ i18n.t("Game library.", "Játéktár.") }}</h1>
+  <p class="lede"><span class="lang-en" lang="en">Solo games run on the arcade; LAN games need a Python server on your Wi-Fi, so this shelf links out instead of pretending to embed them. Play + source live at <a href="{{ site.arcadeUrl }}">browser-games ↗</a> and <a href="{{ site.gamesRepo }}">the games repo ↗</a>.</span><span class="lang-hu" lang="hu">Az egyjátékos játékok az árkád oldalán futnak; a LAN játékokhoz Python szerver kell a Wi-Fi hálózaton, ezért ez a polc inkább hivatkozik rájuk, mintsem beágyazná őket. Játék és forrás: <a href="{{ site.arcadeUrl }}">browser-games ↗</a> és <a href="{{ site.gamesRepo }}">a játékok repója ↗</a>.</span></p>
 </div>
 
 <div class="filter-row" role="search">
-  <label for="q">Filter</label>
-  <input id="q" type="search" data-filter-search placeholder="e.g. pong, solo, lan…" autocomplete="off">
-  <button class="chip" data-filter-chip="solo" aria-pressed="false">solo</button>
+  <label for="q">{{ i18n.t("Filter", "Szűrő") }}</label>
+  <input id="q" type="search" data-filter-search placeholder="e.g. pong, solo, lan…" data-ph-en="e.g. pong, solo, lan…" data-ph-hu="pl. pong, solo, lan…" autocomplete="off">
+  <button class="chip" data-filter-chip="solo" aria-pressed="false">{{ i18n.t("solo", "egyjátékos") }}</button>
   <button class="chip" data-filter-chip="lan" aria-pressed="false">lan</button>
 </div>
 
 <ol style="list-style:none;margin:0;padding:0">
 {% for g in games %}
-  <li class="entry" data-filter-item="{{ g.title }} {{ g.players }} {{ g.kind }} {{ g.blurb }}">
+  <li class="entry" data-filter-item="{{ g.title }} {{ g.players }} {{ g.kind }} {{ g.blurb }} {{ g.playersHu }} {{ g.blurbHu }}">
     <div class="entry-top">
       <span class="entry-index">{{ loop.index | pad2 }}/</span>
       <h2 class="entry-title">{{ g.title }}</h2>
-      <span class="stamp {{ g.status }}">{{ g.status }}</span>
+      <span class="stamp {{ g.status }}"><span class="lang-en" lang="en">{{ g.status }}</span><span class="lang-hu" lang="hu">{{ i18n.statusHu(g.status) }}</span></span>
       {% if g.version %}<span class="tag">v{{ g.version }}</span>{% endif %}
     </div>
-    <p class="blurb">{{ g.blurb }}</p>
-    <p class="entry-meta"><span>{{ g.players }}</span><span>{{ g.dir }}</span></p>
+    <p class="blurb">{{ i18n.t(g.blurb, g.blurbHu) }}</p>
+    <p class="entry-meta"><span>{{ i18n.t(g.players, g.playersHu) }}</span><span>{{ g.dir }}</span></p>
     <p class="btn-row">
-      {% if g.site %}<a class="btn" href="{{ g.site }}">play ↗</a>{% endif %}
+      {% if g.site %}<a class="btn" href="{{ g.site }}">{{ i18n.t("play ↗", "játék ↗") }}</a>{% endif %}
       <a class="btn" href="{{ g.repo }}">repo ↗</a>
     </p>
     <details>
-      <summary>Controls &amp; how to run</summary>
-      <p class="controls">{{ g.controls }}. Source folder <code>{{ g.dir }}</code> in <a href="{{ g.repo }}">the repo ↗</a>. {% if g.site %}Also playable at <a href="{{ g.site }}">the arcade ↗</a>.{% else %}Run the folder's server script, then open the printed LAN URL on both devices.{% endif %}</p>
+      <summary>{{ i18n.t("Controls & how to run", "Irányítás és indítás") }}</summary>
+      <p class="controls"><span class="lang-en" lang="en">{{ g.controls }}. Source folder <code>{{ g.dir }}</code> in <a href="{{ g.repo }}">the repo ↗</a>. {% if g.site %}Also playable at <a href="{{ g.site }}">the arcade ↗</a>.{% else %}Run the folder's server script, then open the printed LAN URL on both devices.{% endif %}</span><span class="lang-hu" lang="hu">{{ g.controlsHu or g.controls }}. Forrásmappa <code>{{ g.dir }}</code> a <a href="{{ g.repo }}">repóban ↗</a>. {% if g.site %}Az <a href="{{ g.site }}">árkádban ↗</a> is játszható.{% else %}Futtasd a mappa szerver-szkriptjét, majd nyisd meg a kiírt LAN URL-t mindkét eszközön.{% endif %}</span></p>
     </details>
   </li>
 {% endfor %}

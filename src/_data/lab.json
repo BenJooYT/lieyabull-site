@@ -7,7 +7,8 @@
       "forge",
       "baritone"
     ],
-    "text": "Client-side Forge mod on top of Baritone pathfinding: automation loops, task chains, inventory helpers, GUI. Deliberately kept as a lab note here, not a featured project."
+    "text": "Client-side Forge mod on top of Baritone pathfinding: automation loops, task chains, inventory helpers, GUI. Deliberately kept as a lab note here, not a featured project.",
+    "textHu": "Kliensoldali Forge mod a Baritone útvonalkeresésre építve: automatizálási hurkok, feladatláncok, leltársegédek, GUI. Szándékosan laborjegyzetként tartva, nem kiemelt projektként."
   },
   {
     "title": "PAWS: Quest + touch den (Godot)",
@@ -17,7 +18,8 @@
       "godot",
       "android"
     ],
-    "text": "Night clearing with theriotype cubes, mirror, phantom-body rig (tail/ears/paws), same APK on Quest XR + phone touch + PC flat. See the paws folder for build notes."
+    "text": "Night clearing with theriotype cubes, mirror, phantom-body rig (tail/ears/paws), same APK on Quest XR + phone touch + PC flat. See the paws folder for build notes.",
+    "textHu": "Éjszakai tisztás theriotype-kockákkal, tükörrel, fantomtest-riggel (farok/fülek/mancsok); ugyanaz az APK Quest XR-en, telefonos érintéssel és lapos PC-n. A buildjegyzetek a paws mappában."
   },
   {
     "title": "Neon Drift daily seeds + ghost replays",
@@ -27,29 +29,35 @@
       "procgen"
     ],
     "text": "Seeded track of the day + per-day tops + exportable ghosts. Small procedural-generation study that shipped inside a game.",
+    "textHu": "Seedelt napi pálya + napi csúcsok + exportálható szellemek. Kis procedurális generálási tanulmány, ami egy játékban landolt.",
     "repo": "https://github.com/CursedOne0u0/local-browser-games/tree/main/local-browser-games/1player/neon-drift",
     "site": "https://benjooyt.github.io/browser-games/games/local-browser-games/1player/neon-drift/"
   },
   {
     "title": "Electronics bench (placeholder)",
+    "titleHu": "Elektronikai műhely (helyfoglaló)",
     "status": "placeholder",
     "tags": [
       "electronics"
     ],
-    "text": "Reserved slot. No claims yet. First circuit notes land here."
+    "text": "Reserved slot. No claims yet. First circuit notes land here.",
+    "textHu": "Fenntartott hely. Még nincs állítás. Az első áramköri jegyzetek ide kerülnek."
   },
   {
     "title": "Taiga-S1 on Android: on-device CAD agent",
+    "titleHu": "Taiga-S1 Androidon: eszközön futó CAD-ügynök",
     "status": "note",
     "tags": [
       "android",
       "ai"
     ],
     "text": "Porting Taiga-S1 (1.2M-parameter CAD agent) to Android: Termux plus Debian proot driving FreeCAD 1.0 on-phone, modeled a twin-cylinder engine part by part (19 parts, IoU 1.0 each). Repo has the full run plus an offline Three.js viewer.",
+    "textHu": "A Taiga-S1 (1,2 millió paraméteres CAD-ügynök) portolása Androidra: Termux és Debian proot hajtja a FreeCAD 1.0-t a telefonon, egy ikerhengeres motort modellezett alkatrészenként (19 alkatrész, egyenként 1.0 IoU). A repóban a teljes futás és egy offline Three.js nézegető is van.",
     "repo": "https://github.com/BenJooYT/taiga-s1-android"
   },
   {
     "title": "external-mctool: block scanner + overlay",
+    "titleHu": "external-mctool: blokkszkennner + overlay",
     "status": "note",
     "tags": [
       "minecraft",
@@ -57,6 +65,7 @@
       "overlay"
     ],
     "text": "Fabric client mod scans an 8-chunk radius for watched block IDs and streams matches plus camera data as JSON over localhost. A C# WinForms app draws a transparent click-through overlay from it. Personal singleplayer project.",
+    "textHu": "Fabric kliensmod 8 chunkos sugárban figyeli a kiválasztott blokk-ID-ket, és JSON-ban streameli a találatokat plusz kameradatokat localhoston. Egy C# WinForms alkalmazás átlátszó, kattintásátengedő overlayt rajzol belőle. Személyes egyjátékos projekt.",
     "repo": "https://github.com/BenJooYT/external-mctool"
   }
 ]

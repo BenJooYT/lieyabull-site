@@ -1,33 +1,36 @@
 ---
 layout: base.njk
 title: Lab
+titleHu: Labor
 description: Small experiments and notes that don't need a full project page.
+descriptionHu: Kis kísérletek és jegyzetek, amelyeknek nem kell teljes projektoldal.
 ---
+{% import "i18n.njk" as i18n %}
 <div class="page-head">
-  <p class="kicker">04 · Lab: experiment archive</p>
-  <h1>Small things, kept anyway.</h1>
-  <p class="lede">Browser toys, proc-gen, circuits, Minecraft and AI notes.</p>
+  <p class="kicker">{{ i18n.t("04 · Lab: experiment archive", "04 · Labor: kísérletarchívum") }}</p>
+  <h1>{{ i18n.t("Small things, kept anyway.", "Apróságok, mégis megtartva.") }}</h1>
+  <p class="lede">{{ i18n.t("Browser toys, proc-gen, circuits, Minecraft and AI notes.", "Böngészős játékok, procedurális generálás, áramkörök, Minecraft- és AI-jegyzetek.") }}</p>
 </div>
 
 <div class="filter-row" role="search">
-  <label for="q">Filter</label>
-  <input id="q" type="search" data-filter-search placeholder="e.g. vr, minecraft, electronics…" autocomplete="off">
+  <label for="q">{{ i18n.t("Filter", "Szűrő") }}</label>
+  <input id="q" type="search" data-filter-search placeholder="e.g. vr, minecraft, electronics…" data-ph-en="e.g. vr, minecraft, electronics…" data-ph-hu="pl. vr, minecraft, elektronika…" autocomplete="off">
   <button class="chip" data-filter-chip="minecraft" aria-pressed="false">minecraft</button>
   <button class="chip" data-filter-chip="vr" aria-pressed="false">vr</button>
   <button class="chip" data-filter-chip="browser" aria-pressed="false">browser</button>
 </div>
 
 {% for e in lab %}
-<article class="entry" data-filter-item="{{ e.title }} {{ e.tags | join(' ') }} {{ e.text }}">
+<article class="entry" data-filter-item="{{ e.title }} {{ e.titleHu }} {{ e.tags | join(' ') }} {{ e.text }} {{ e.textHu }}">
   <div class="entry-top">
     <span class="entry-index">{{ loop.index | pad2 }}/</span>
-    <h2 class="entry-title">{{ e.title }}</h2>
-    <span class="stamp {{ e.status }}">{{ e.status }}</span>
+    <h2 class="entry-title">{{ i18n.t(e.title, e.titleHu) }}</h2>
+    <span class="stamp {{ e.status }}"><span class="lang-en" lang="en">{{ e.status }}</span><span class="lang-hu" lang="hu">{{ i18n.statusHu(e.status) }}</span></span>
   </div>
-  <p class="blurb">{{ e.text }}</p>
+  <p class="blurb">{{ i18n.t(e.text, e.textHu) }}</p>
   {% if e.repo or e.site %}
   <p class="btn-row">
-    {% if e.site %}<a class="btn" href="{{ e.site }}">site ↗</a>{% endif %}
+    {% if e.site %}<a class="btn" href="{{ e.site }}">{{ i18n.t("site ↗", "oldal ↗") }}</a>{% endif %}
     {% if e.repo %}<a class="btn" href="{{ e.repo }}">repo ↗</a>{% endif %}
   </p>
   {% endif %}

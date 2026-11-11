@@ -1,8 +1,9 @@
 {
   "name": "Lieyabull",
   "tagline": "workshop log",
-  "handles": "Still \u00b7 Stillfox \u00b7 BenJooYT",
+  "handles": "Still · Stillfox · BenJooYT",
   "description": "Games, Minecraft contraptions, and small experiments, kept in one den.",
+  "descriptionHu": "Játékok, Minecraft szerkezetek és kisebb kísérletek, egyetlen odúban tartva.",
   "arcadeUrl": "https://benjooyt.github.io/browser-games/",
   "gamesRepo": "https://github.com/CursedOne0u0/local-browser-games",
   "issueNo": "001"

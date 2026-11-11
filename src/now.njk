@@ -1,18 +1,21 @@
 ---
 layout: base.njk
 title: Now
+titleHu: Most
 description: What Lieyabull is doing right now, edited by hand.
+descriptionHu: Mit csinál Lieyabull éppen most, kézzel szerkesztve.
 ---
+{% import "i18n.njk" as i18n %}
 <div class="page-head">
-  <p class="kicker">05 · Now</p>
-  <h1>Now.</h1>
-  <p class="lede">Updated {{ now.updated }}.</p>
+  <p class="kicker">{{ i18n.t("05 · Now", "05 · Most") }}</p>
+  <h1>{{ i18n.t("Now.", "Most.") }}</h1>
+  <p class="lede">{{ i18n.t("Updated " + now.updated + ".", "Frissítve: " + now.updated + ".") }}</p>
 </div>
 
 <dl class="now-grid">
-  <div><dt>Currently building</dt></div><div><dd>{{ now.building }}</dd></div>
-  <div><dt>Playing</dt></div><div><dd>{{ now.playing }}</dd></div>
-  <div><dt>Learning</dt></div><div><dd>{{ now.learning }}</dd></div>
-  <div><dt>Current rabbit hole</dt></div><div><dd>{{ now.rabbithole }}</dd></div>
-  <div><dt>Last experiment</dt></div><div><dd>{{ now.lastexperiment }}</dd></div>
+  <div><dt>{{ i18n.t("Currently building", "Jelenleg épül") }}</dt></div><div><dd>{{ i18n.t(now.building, now.buildingHu) }}</dd></div>
+  <div><dt>{{ i18n.t("Playing", "Játék") }}</dt></div><div><dd>{{ i18n.t(now.playing, now.playingHu) }}</dd></div>
+  <div><dt>{{ i18n.t("Learning", "Tanulás") }}</dt></div><div><dd>{{ i18n.t(now.learning, now.learningHu) }}</dd></div>
+  <div><dt>{{ i18n.t("Current rabbit hole", "Aktuális nyúlüreg") }}</dt></div><div><dd>{{ i18n.t(now.rabbithole, now.rabbitholeHu) }}</dd></div>
+  <div><dt>{{ i18n.t("Last experiment", "Utolsó kísérlet") }}</dt></div><div><dd>{{ i18n.t(now.lastexperiment, now.lastexperimentHu) }}</dd></div>
 </dl>

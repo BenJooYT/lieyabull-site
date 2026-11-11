@@ -1,8 +1,13 @@
 {
   "updated": "2026-09-30",
   "building": "BSnake + Dung (dungeon/roguelite Paper plugin)",
+  "buildingHu": "BSnake + Dung (dungeon/rogue-lite Paper plugin)",
   "playing": "Minecraft, Roblox, VRChat, Beat Saber",
+  "playingHu": "Minecraft, Roblox, VRChat, Beat Saber",
   "learning": "Luau / 3D modelling / CAD",
+  "learningHu": "Luau / 3D modellezés / CAD",
   "rabbithole": "Local LLM solutions + red-team testing",
-  "lastexperiment": "This site, the Eleventy shelf/arcade/lab den build"
+  "rabbitholeHu": "Helyi LLM-megoldások + red-team tesztelés",
+  "lastexperiment": "This site, the Eleventy shelf/arcade/lab den build",
+  "lastexperimentHu": "Ez az oldal, az Eleventy polc/árkád/labor odú építése"
 }

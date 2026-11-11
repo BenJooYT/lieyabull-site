@@ -1,0 +1,7 @@
+{% macro t(en, hu) -%}
+<span class="lang-en" lang="en">{{ en }}</span><span class="lang-hu" lang="hu">{{ hu if hu else en }}</span>
+{%- endmacro %}
+
+{% macro statusHu(status) -%}
+{%- if status == "playable" %}játszható{% elif status == "lan-only" %}csak LAN{% elif status == "note" %}jegyzet{% elif status == "placeholder" %}helyfoglaló{% elif status == "active" %}aktív{% elif status == "building" %}épül{% else %}{{ status }}{% endif -%}
+{%- endmacro %}
